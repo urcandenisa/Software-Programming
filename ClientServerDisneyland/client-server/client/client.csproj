@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7023BC08-3161-4F50-AAB9-657B7F04F34C}</ProjectGuid>
+    <ProjectTypeGuids>{A3F8F2AB-B479-4A4A-A458-A89E7DC349F1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>client</RootNamespace>
+    <AssemblyName>client</AssemblyName>
+    <MonoMacResourcePrefix>Resources</MonoMacResourcePrefix>
+    <UseXamMacFullFramework>true</UseXamMacFullFramework>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <EnableCodeSigning>false</EnableCodeSigning>
+    <CodeSigningKey>Mac Developer</CodeSigningKey>
+    <CreatePackage>false</CreatePackage>
+    <EnablePackageSigning>false</EnablePackageSigning>
+    <IncludeMonoRuntime>false</IncludeMonoRuntime>
+    <UseSGen>true</UseSGen>
+    <UseRefCounting>true</UseRefCounting>
+    <HttpClientHandler>HttpClientHandler</HttpClientHandler>
+    <LinkMode>None</LinkMode>
+    <XamMacArch></XamMacArch>
+    <AOTMode>None</AOTMode>
+    <ExternalConsole>false</ExternalConsole>
+    <NoWarn></NoWarn>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <DefineConstants></DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <EnableCodeSigning>false</EnableCodeSigning>
+    <CreatePackage>true</CreatePackage>
+    <EnablePackageSigning>false</EnablePackageSigning>
+    <IncludeMonoRuntime>true</IncludeMonoRuntime>
+    <UseSGen>true</UseSGen>
+    <UseRefCounting>true</UseRefCounting>
+    <CodeSignEntitlements>Entitlements.plist</CodeSignEntitlements>
+    <LinkMode>None</LinkMode>
+    <HttpClientHandler>HttpClientHandler</HttpClientHandler>
+    <XamMacArch></XamMacArch>
+    <AOTMode>None</AOTMode>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.Mac" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon-128.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon-128%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon-16.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon-16%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon-256.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon-256%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon-32.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon-32%402x.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon-512.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AppIcon-512%402x.png" />
+    <ImageAsset Include="Assets.xcassets\Contents.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\Contents 3.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcon.appiconset\AppIcon-32%402x 3.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcon.appiconset\AppIcon-512 3.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcon.appiconset\AppIcon-128%402x 3.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcon.appiconset\Contents 3.json" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcon.appiconset\AppIcon-16%402x 3.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcon.appiconset\AppIcon-512%402x 3.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcon.appiconset\AppIcon-16 3.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcon.appiconset\AppIcon-256%402x 3.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcon.appiconset\AppIcon-32 3.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcon.appiconset\AppIcon-128 3.png" />
+    <ImageAsset Include="Resources\Assets.xcassets\AppIcon.appiconset\AppIcon-256 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="Controller\" />
+    <Folder Include="ObjectHandler\" />
+    <Folder Include="View\" />
+    <Folder Include="ConnectionHandler\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="Controller\ViewController.cs" />
+    <Compile Include="Controller\ViewController.designer.cs">
+      <DependentUpon>ViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\Cart.cs" />
+    <Compile Include="Controller\Cart.designer.cs">
+      <DependentUpon>Cart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\PlacesToStay.cs" />
+    <Compile Include="Controller\PlacesToStay.designer.cs">
+      <DependentUpon>PlacesToStay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\Shop.cs" />
+    <Compile Include="Controller\Shop.designer.cs">
+      <DependentUpon>Shop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\ThingsToDo.cs" />
+    <Compile Include="Controller\ThingsToDo.designer.cs">
+      <DependentUpon>ThingsToDo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\CreateAccount.cs" />
+    <Compile Include="Controller\CreateAccount.designer.cs">
+      <DependentUpon>CreateAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\Register.cs" />
+    <Compile Include="Controller\Register.designer.cs">
+      <DependentUpon>Register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\UserView.cs" />
+    <Compile Include="Controller\UserView.designer.cs">
+      <DependentUpon>UserView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\LogIn.cs" />
+    <Compile Include="Controller\LogIn.designer.cs">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\AdministratorView.cs" />
+    <Compile Include="Controller\AdministratorView.designer.cs">
+      <DependentUpon>AdministratorView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\LogInWindow.cs" />
+    <Compile Include="View\LogInWindow.designer.cs">
+      <DependentUpon>LogInWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AdministratorWindow.cs" />
+    <Compile Include="View\AdministratorWindow.designer.cs">
+      <DependentUpon>AdministratorWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConnectionHandler\Connection.cs" />
+    <Compile Include="Controller\CreateActivity.cs" />
+    <Compile Include="Controller\CreateActivity.designer.cs">
+      <DependentUpon>CreateActivity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ObjectHandler\BaseHandler.cs" />
+    <Compile Include="MessageHandler.cs" />
+    <Compile Include="IMessageController.cs" />
+    <Compile Include="Controller\ParksTickets.cs" />
+    <Compile Include="Controller\ParksTickets.designer.cs">
+      <DependentUpon>ParksTickets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ObjectHandler\UserHandler.cs" />
+    <Compile Include="Controller\UserSearch.cs" />
+    <Compile Include="Controller\UserSearch.designer.cs">
+      <DependentUpon>UserSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\SearchActivities.cs" />
+    <Compile Include="Controller\SearchActivities.designer.cs">
+      <DependentUpon>SearchActivities.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ObjectHandler\AdminHandler.cs" />
+    <Compile Include="Controller\AdminSearch.cs" />
+    <Compile Include="Controller\AdminSearch.designer.cs">
+      <DependentUpon>AdminSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\SearchUser.cs" />
+    <Compile Include="Controller\SearchUser.designer.cs">
+      <DependentUpon>SearchUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\CreateAccountWindow.cs" />
+    <Compile Include="View\CreateAccountWindow.designer.cs">
+      <DependentUpon>CreateAccountWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\UpdateDeleteAccount.cs" />
+    <Compile Include="Controller\UpdateDeleteAccount.designer.cs">
+      <DependentUpon>UpdateDeleteAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\ViewRegistrations.cs" />
+    <Compile Include="Controller\ViewRegistrations.designer.cs">
+      <DependentUpon>ViewRegistrations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ObjectHandler\IBaseHandler.cs" />
+    <Compile Include="IMessageHandler.cs" />
+    <Compile Include="MessageController.cs" />
+    <Compile Include="ObjectHandler\IAdminHandler.cs" />
+    <Compile Include="Controller\Alert.cs" />
+    <Compile Include="Controller\Alert.designer.cs">
+      <DependentUpon>Alert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ObjectHandler\IUserHandler.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Main.storyboard" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\1.jpg" />
+    <BundleResource Include="Resources\2.png" />
+    <BundleResource Include="Resources\circus.png" />
+    <BundleResource Include="Resources\custom-caricature-family-portrait-disneyland-personalize-gifts-digital-art.jpg" />
+    <BundleResource Include="Resources\dlr-event-after-dark-hero-castle-5x2.jpg" />
+    <BundleResource Include="Resources\hotel-2-64.ico" />
+    <BundleResource Include="Resources\iconfinder_30_-_Harry_Potter_-_Colour_-_Hogwarts__2730341.png" />
+    <BundleResource Include="Resources\iconfinder_calendar_285670.png" />
+    <BundleResource Include="Resources\icons8-new-24.png" />
+    <BundleResource Include="Resources\map-marker-64.ico" />
+    <BundleResource Include="Resources\maureen-halloween.jpg" />
+    <BundleResource Include="Resources\shopping-cart-16.ico" />
+    <BundleResource Include="Resources\Soundsational_Parade.jpg" />
+    <BundleResource Include="Resources\vimwsuqqtctakrxba5r6.jpg" />
+    <BundleResource Include="Resources\ZZ6A42F927.jpg" />
+    <BundleResource Include="Resources\trash.png" />
+    <BundleResource Include="Resources\look.png" />
+    <BundleResource Include="Resources\3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\core\core.csproj">
+      <Project>{0E6537A9-A6C1-482E-8182-BBA2CD30F7FD}</Project>
+      <Name>core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Mac\Xamarin.Mac.CSharp.targets" />
+</Project>
